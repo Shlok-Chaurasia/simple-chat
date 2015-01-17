@@ -5,8 +5,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Enumeration;
 import java.util.Hashtable;
-
-
 public class Server {
 	
 	private ServerSocket serverSocket;
