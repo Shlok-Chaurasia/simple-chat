@@ -27,15 +27,10 @@ public class Client extends Panel implements Runnable {
 			}
 		});
 		try {
-			// Initiate the connection
 			socket = new Socket(host, port);
-			// We got a connection! Tell the world
 			System.out.println("connected to " + socket);
-			// Let's grab the streams and create DataInput/Output streams
-			// from them
 			din = new DataInputStream(socket.getInputStream());
 			dout = new DataOutputStream(socket.getOutputStream());
-			// Start a background thread for receiving messages
 			new Thread(this).start();
 		} catch (IOException ie) {
 			System.out.println(ie);
